@@ -71,3 +71,27 @@
     - 특정 저장점까지 롤백하면 `그 이후`의 명령과 저장점은 모두 `무효`가 됨
     - 일부 tool에서는 지원되지 않음
     - 동일 이름으로 여러 저장점 정의시 나중에 정의한 저장점이 유효
+
+---
+
+## DCL
+- 사용자의 계정 생성/삭제, 권한 부여/회수에 대한 명령어
+- DROP 연산 수행시..
+  - CASCADE 옵션 사용시 사용자가 생성한 객체도 함께 삭제됨
+  - CASCADE 옵션 미사용시 사용자가 객체를 갖고 있지 않은 경우에만 삭제 실행
+
+- SESSION 생성권한
+  - 로그인을 위해 CREATE SESSION 권한 필요
+  ```sql
+  GRANT CREATE SESSION TO kmumis;
+  ```
+- Object 권한
+  - 테이블 생성을 위해 CREATE TABLE 군한 필요
+  ```sql
+  GRANT CREATE TABLE TO kmumis;
+  ```
+- 다른 Object 권한
+  - `GRANT` 권한 `ON` 소유계정. 테이블명 `TO` 계정명
+  ```sql
+  GRANT SELECT ON kmumis.PLAYER TO mis1;
+  ```
