@@ -34,3 +34,13 @@ alter table player_temp rename column player_id to player_new_id;
 
 -- modify
 alter table player_temp modify (player_name null);
+
+alter table player_temp
+add constraint player_temp_pk
+primary key (player_new_id);
+
+alter table player_temp
+drop constraint player_temp_pk;
+
+-- rename
+rename player_temp to old_player;
