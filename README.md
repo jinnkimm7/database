@@ -7,3 +7,4 @@
 - <a href="https://www.youtube.com/playlist?list=PLlCujDgOz8x4JN2wHKbmlM8bFan-WaKj5">SQLD 문제풀이 <전광철 OCP> </a>
 - <a href="https://school.programmers.co.kr/learn/challenges?tab=sql_practice_kit">프로그래머스 SQL 고득점 Kit</a>
 - [2022-09-04] SQLD 자격증 시험 예정
+- [2022-09-30] SQLD 자격증 취득
